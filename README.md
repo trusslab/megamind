@@ -223,7 +223,13 @@ python3.7 -m pip install tmuxp
 cd $WD/MegaMind
 git clone https://github.com/trusslab/megamind.git MegaMind_engine/
  ```
+### Download DeepSpeech's pre-trained english models
+```bash
+cd $WD/MegaMind/MegaMind_engine/deep_speech_models
+curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.pbmm
+curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.scorer
 
+```
 ## Run MegaMind 
 
 First we need to provide the Client ID for each SDK for authentication purposes.
