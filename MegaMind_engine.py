@@ -183,7 +183,8 @@ def end_session_notice_thread(name):
 				payload_pipe.write_to_pipe("s")
 			end_session()
 		else:
-			print("somthing is wrong!!")
+#			print("somthing is wrong!!")
+			print("--")
 	return
 
 def start_session():

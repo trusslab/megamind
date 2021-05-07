@@ -215,8 +215,8 @@ def main():
 	global listen_event_signal
 
 	print('Initializing model...')
-	model = deepspeech.Model('deep_speech_models/deepspeech-0.7.0-models.pbmm')
-	model.enableExternalScorer('deep_speech_models/deepspeech-0.7.0-models.scorer')
+	model = deepspeech.Model('deep_speech_models/deepspeech-0.9.3-models.pbmm')
+	model.enableExternalScorer('deep_speech_models/deepspeech-0.9.3-models.scorer')
 	# Start audio with VAD
 	vad_audio = VADAudio(aggressiveness=3,
 		device=None,
