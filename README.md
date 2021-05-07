@@ -161,6 +161,7 @@ MegaMind uses several third-party components such as speech-to-text and text-to-
  cd $WD/MegaMind
  git clone https://github.com/netblue30/firejail.git  
  cd firejail  
+ sudo apt install gawk
  ./configure && make && sudo make install
  sudo cp /lib/x86_64-linux-gnu/libssl.so.1.0.0 /usr/lib/
  ```
