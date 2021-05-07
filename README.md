@@ -132,25 +132,15 @@ And insert the following lines to build.sh:
 SDK_FOLDER=$WD/MegaMind/MegaMind_Alexa_SDK
 
 cmake $SDK_FOLDER/source \
-
 -DCMAKE_BUILD_TYPE=DEBUG \
-
 -DSENSORY_KEY_WORD_DETECTION=OFF \
-
 -DKITTAI_KEY_WORD_DETECTOR=ON \
-
 -DKITTAI_KEY_WORD_DETECTOR_LIB_PATH=$SDK_FOLDER/third-party/snowboy/lib/ubuntu64/libsnowboy-detect.a \
-
 -DKITTAI_KEY_WORD_DETECTOR_INCLUDE_DIR=$SDK_FOLDER/third-party/snowboy/include \
-
 -DGSTREAMER_MEDIA_PLAYER=ON \
-
 -DPORTAUDIO=ON \
-
 -DPORTAUDIO_LIB_PATH=$SDK_FOLDER/third-party/portaudio/lib/.libs/libportaudio.a \
-
 -DPORTAUDIO_INCLUDE_DIR=$SDK_FOLDER/third-party/portaudio/include \
-
 -DACSDK_EMIT_SENSITIVE_LOGS=ON && make
 
 ```
