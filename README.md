@@ -209,7 +209,7 @@ python3.7
 in python3.7 shell please type the following commands:
 ```python
 >>> import nltk
->>> nltk.download( ‘wordnet’)
+>>> nltk.download( 'wordnet')
 ```
 
 #### Install tmuxp
