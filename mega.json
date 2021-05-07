@@ -10,20 +10,18 @@
 	   "shell_command":[
 		"sleep 5",
 		"echo run the Device SDK here",
-		"cd MegaMind_device_SDK1/build",
+		"cd ../MegaMind_Alexa_SDK/build",
 		"source run.sh"
 	   ]
 	},{
 	   "shell_command":[
 		"echo run the Megamind engine here",
-		"cd MegaMind_engine",
 		"python3.7 MegaMind_engine.py"
 	   ]
 	},{
 	   "shell_command":[
 		"sleep 3",
 		"echo run MegaMind text API here",
-		"cd MegaMind_engine",
 		"python3.7 MegaMind_text_API.py"
 	   ]
 	}
