@@ -59,7 +59,7 @@ class Sandbox:
 			arg2 = '/usr/bin/python3.7'
 			arg3 = 'run_time.py'
 			args = [cmdbin , arg1 + arg1_1 +arg1_2, arg2, arg3]
-			print(args)
+			print('\n\n\n\n',args,'\n\n\n\n')
 			os.execv(cmdbin,args)
 			return
 		self.pid = newpid

@@ -13,7 +13,7 @@ whitelist /tmp/mysession
 
 blacklist /sys
 blacklist /etc/*
-blacklist /proc/*
+#blacklist /proc/*
 blacklist /opt
 blacklist /root
 blacklist /lost+found
