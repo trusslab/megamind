@@ -1,0 +1,13 @@
+{
+  "type" : "discarder",
+  "name" : "parental control",
+  "filters": [
+    {
+      "keywords": {
+        "include_or": [
+          "contain_synonym(buy)"
+        ]
+      }
+     }
+   ]
+}

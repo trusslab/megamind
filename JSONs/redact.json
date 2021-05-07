@@ -1,0 +1,20 @@
+{
+  "type" : "sanitizer",
+  "name" : "privacy redactor",
+  "filters": [
+    {
+      "keywords": {
+        "include_or": [
+          "contain_profanity()",
+	  "contain_first_name()"
+        ]
+      },
+	  "Skill_ID": {
+        "exclude_and": [
+          "TrustedSkill_ID1",
+          "TrustedSkill_ID2"
+        ]
+      }
+     }
+   ]
+}

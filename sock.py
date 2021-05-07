@@ -1,0 +1,21 @@
+PortNumber =     9876
+PortNumber_stop =     9878
+PortNumber_start =     9880
+PortNumber_MegaMindEngine =     9882
+PortNumber_start_speech_1  =    9884
+PortNumber_end_speech_1     = 9886
+PortNumber_start_speech_2   =   9888
+PortNumber_end_speech_2    =  9890
+PortNumber_start_speech_3   =   9892
+PortNumber_end_speech_3    =  9894
+PortNumber_start_speech_4  =    9896
+PortNumber_end_speech_4    =  9898
+PortNumber_alexa_response  =   9900
+PortNumber_text_start_req  =   9902
+PortNumber_start_session_notice = 9904
+PortNumber_end_session_notice = 9906
+MaxConnects    =    8
+BuffSize     =    256
+ConversationLen  =  3
+Host          =  "localhost"
+

@@ -1,0 +1,16 @@
+{
+  "type" : "discarder",
+  "filters": [
+	
+      {
+      "time": {
+        "include_or": [
+          {
+            "start": "07:00",
+            "end": "24:00"
+          }
+        ]
+      }
+    }
+  ]
+}
