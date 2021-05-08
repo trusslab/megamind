@@ -304,3 +304,82 @@ To Authorize, browse to https://amazon.com/us/code and enter the code:xxxx
 ```
 You need to follow the instructions and authorize the device. 
 
+After authorization you need to close all windows and run MegaMind again.
+To do that, you can press 'ctrl+b' followed by ':' and type kill-session. Or you can press 'ctrl+c' and 'ctrl+d' multiple times.
+To run MegaMind again
+ 
+```bash
+cd $WD/MegaMind/MegaMind_engine
+tmuxp load mega.json
+```
+
+## Use MegaMind 
+After running MegaMind a tmux session opens with three panes. The upper left pane, is the modified Alexa SDK. The upper right pane is MegaMind engine logs, and the lower pane is the MegaMind API ( which can be a text based API -if you use mega.json- or voice based API -if you use megaVoice.json' to run MegaMind).
+
+After running MegaMind, please wait until you see 
+
+```bash
+##################################
+#      Alexa is currently idle    #
+##################################
+```
+in upper left pane. 
+After seeing this you can use the lower pane to insert your commands. 
+You first need to press 's' followed by Enter key. Then you can type your command followed by Enter key.
+For example you can type "what time is it" to check if the Alexa device is up and running.
+Please note that for multi-turn conversations, you should not press 's' before each of your commands, when the Alexa (upper left pane) goes to "listenning state) the MegaMind text API, automatically asks you to insert your next command. 
+
+
+### Test MegaMind's extensios
+To show how MegaMind's extensions work in action, we enabled 3 simple extensions by default. A discarder that discards purchase related utterances. A sanitizer which redacts first name of a family members ( in this example, alex, steve and julia), and a companion extension which enables secure conversation with its companion skill. 
+We also enabled two beta Alexa skills in our Alexa account to facilitate testing this extensions. First one is 'repeat conversation' which simply repeat whatever you say after the keyword 'repeat'. Second one is 'confidential conversation' which echos whatever you say, but uses MegaMind enabled secure channel (It sends and recevies encrypted messages hidden from AVS). 
+
+You can try following commands to test some features of MegaMind. ( -your cmds,  +skill's responses)
+
+```bash
+- open repeat conversation
++ Welcome to mega mirror, what do you want me to repeat
+- repeat it is a very nice day
++ you said it is a very nice day
+- repeat please call steve 
++ you said please call ---- (a random name)
+- repeat buy me a car
++ your message is discarded by parental control extension
+```
+
+
+```bash
+- open confidential conversation
++ Welcome to the confidential conversation skill,  do you want to start a secret conversation?
+- yes
++ A secure connection has stablished, tell me something
+- how much money do i have in my bank account
++ you said how much money do i have in my bank account
+- my name is julia
++ you said my name is ----- ( a random name)
+- stop
++ Goodbye
+```
+You can see at the upper left pane that Alexa is not aware of any of the above conversations and it only sees ciphertext.
+
+If at any stage you see an error or any undefined behaviour, please kill the tmux session, and run MegaMind again. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
