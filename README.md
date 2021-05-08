@@ -3,13 +3,13 @@
 MegaMind is a platform that enables users to deploy useful extensions on the Alexa virtual assistant. In the following document, we show how to build MegaMind from its source and deploy it on an x86 desktop. 
 
 This tutorial has been tested on Ubuntu16.04 on a VMWare virtual machine with the following properties:
-20GB of storage, 2GB of RAM and 4 CPUs.
+20GB of storage, 2GB of RAM, and 4 CPUs.
 
 
 
 ## Download MegaMind source
 
-Let assume you want to setup MegaMind in a directory called ``$WD``.
+Let assume you want to set up MegaMind in a directory called ``$WD``.
 First you need to make a few directories in ``$WD``
 ```bash
     cd $WD
@@ -18,7 +18,7 @@ First you need to make a few directories in ``$WD``
     mkdir MegaMind_Alexa_SDK MegaMind_engine
 ```
 We clone a modified version of Amazon Alexa SDK into the ``MegaMind_Alexa_SDK`` and all other source codes for MegaMind in MegaMind_engine.
-First lets download and setup ``MegaMind_Alexa_SDK``.
+First, lets download and set up ``MegaMind_Alexa_SDK``.
 
 ### Download and  setup MegaMind_Alexa_SDK
 ```bash
@@ -46,7 +46,7 @@ gstreamer1.0-libav libgstrtspserver-1.0-dev
     
 sudo apt-get -y install build-essential nghttp2 libnghttp2-dev libssl-dev
 ```
-Then we need to download a few third party binaries.    
+Then we need to download a few third-party binaries.    
 ```bash
 cd $WD/MegaMind/MegaMind_Alexa_SDK/third-party
     
@@ -81,7 +81,7 @@ x-xss-protection: 1; mode=block
 x-content-type-options: nosniff
 ```
 
-Next we install PortAudio
+Next, we install PortAudio
 
 ```bash
 cd $WD/MegaMind/MegaMind_Alexa_SDK/third-party
@@ -91,7 +91,7 @@ cd portaudio
 ./configure --without-jack && make
 ```
 
-Next we install the Kitt-AI wake-word detector
+Next, we install the Kitt-AI wake-word detector
 
 ```bash
 cd $WD/MegaMind/MegaMind_Alexa_SDK/third-party
@@ -232,7 +232,7 @@ curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspee
 ```
 ## Run MegaMind 
 
-First we need to provide the Client ID for each SDK for authentication purposes.
+First, we need to provide the Client ID for each SDK for authentication purposes.
 ```bash
     cd $WD/MegaMind/MegaMind_Alexa_SDK/build/Integration
     vim AlexaClientSDKConfig_backup.json
@@ -272,7 +272,7 @@ and copy the following text into the file:
 
 !!! note: please (1) replace XXWDXX with absolute path of $WD.  (2) please replace XXXX CLIENT_ID XXXX with your Amazon Alexa Device client ID.
 
-Then we generate a run  script to run the Device SDK using the above file.
+Then, we generate a run  script to run the Device SDK using the above file.
 
 ```bash
 cd $WD/MegaMind/MegaMind_Alexa_SDK/build
@@ -304,7 +304,7 @@ To Authorize, browse to https://amazon.com/us/code and enter the code:xxxx
 ```
 You need to follow the instructions and authorize the device. 
 
-After authorization you need to close all windows and run MegaMind again.
+After authorization, you need to close all windows and run MegaMind again.
 To do that, you can press 'ctrl+b' followed by ':' and type kill-session. Or you can press 'ctrl+c' and 'ctrl+d' multiple times.
 To run MegaMind again
  
@@ -314,7 +314,7 @@ tmuxp load mega.json
 ```
 
 ## Use MegaMind 
-After running MegaMind a tmux session opens with three panes. The upper left pane, is the modified Alexa SDK. The upper right pane is MegaMind engine logs, and the lower pane is the MegaMind API ( which can be a text based API -if you use mega.json- or voice based API -if you use megaVoice.json' to run MegaMind).
+After running MegaMind, a tmux session opens with three panes. The upper-left pane, is the modified Alexa SDK. The upper-right pane is MegaMind engine logs, and the lower pane is the MegaMind API ( which can be a text based API -if you use mega.json- or voice based API -if you use megaVoice.json' to run MegaMind).
 
 After running MegaMind, please wait until you see 
 
@@ -327,14 +327,14 @@ in upper left pane.
 After seeing this you can use the lower pane to insert your commands. 
 You first need to press 's' followed by Enter key. Then you can type your command followed by Enter key.
 For example you can type "what time is it" to check if the Alexa device is up and running.
-Please note that for multi-turn conversations, you should not press 's' before each of your commands, when the Alexa (upper left pane) goes to "listenning state) the MegaMind text API, automatically asks you to insert your next command. 
+Please note that for multi-turn conversations, you should not press 's' before each of your commands, when the Alexa (upper left pane) goes to "listening" state) the MegaMind text API, automatically asks you to insert your next command. 
 
 
 ### Test MegaMind's extensios
-To show how MegaMind's extensions work in action, we enabled 3 simple extensions by default. A discarder that discards purchase related utterances. A sanitizer which redacts first name of a family members ( in this example, alex, steve and julia), and a companion extension which enables secure conversation with its companion skill. 
-We also enabled two beta Alexa skills in our Alexa account to facilitate testing this extensions. First one is 'repeat conversation' which simply repeat whatever you say after the keyword 'repeat'. Second one is 'confidential conversation' which echos whatever you say, but uses MegaMind enabled secure channel (It sends and recevies encrypted messages hidden from AVS). 
+To show how MegaMind's extensions work in action, we enabled 3 simple extensions by default. A discarder that discards purchase-related utterances. A sanitizer that redacts first name of family members ( in this example, alex, steve and julia), and a companion extension which enables secure conversation with its companion skill. 
+We also enabled two beta Alexa skills in our Alexa account to facilitate testing these extensions. The first one is 'repeat conversation' which simply repeats whatever you say after the keyword 'repeat'. The second one is 'confidential conversation' which echos whatever you say, but uses MegaMind enabled secure channel (It sends and recieves encrypted messages hidden from AVS). 
 
-You can try following commands to test some features of MegaMind. ( -your cmds,  +skill's responses)
+You can try the following commands to test some features of MegaMind. ( -your cmds,  +skill's responses)
 
 ```bash
 - open repeat conversation
@@ -352,7 +352,7 @@ You can try following commands to test some features of MegaMind. ( -your cmds, 
 - open confidential conversation
 + Welcome to the confidential conversation skill,  do you want to start a secret conversation?
 - yes
-+ A secure connection has stablished, tell me something
++ A secure connection has established, tell me something
 - how much money do i have in my bank account
 + you said how much money do i have in my bank account
 - my name is julia
@@ -360,16 +360,22 @@ You can try following commands to test some features of MegaMind. ( -your cmds, 
 - stop
 + Goodbye
 ```
-You can see at the upper left pane that Alexa is not aware of any of the above conversations and it only sees ciphertext.
+You can see at the upper-left pane that Alexa is not aware of any of the above conversations and it only sees ciphertext.
 
-If at any stage you see an error or any undefined behaviour, please kill the tmux session, and run MegaMind again. 
-
-
+If at any stage you see an error or any undefined behavior, please kill the tmux session, and run MegaMind again. 
 
 
 
+### Test MegaMind's voice API
 
+You can test MegaMind's voice API by running MegaMind using following commands:
 
+```bash
+cd $WD/MegaMind/MegaMind_engine
+tmuxp load megaVoice.json
+```
+This time you do not need to press 's' to start a session. You can simply say 'Alexa' to start a session, and then you can say your commands. 
+To get a good result from DeepSpeech speech to text please use headphones in a quiet environment. 
 
 
 
