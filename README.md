@@ -12,10 +12,10 @@ This tutorial has been tested on Ubuntu16.04 on a VMWare virtual machine with th
 Let assume you want to set up MegaMind in a directory called ``$WD``.
 First you need to make a few directories in ``$WD``
 ```bash
-    cd $WD
-    mkdir MegaMind
-    cd MegaMind
-    mkdir MegaMind_Alexa_SDK MegaMind_engine
+ cd $WD
+ mkdir MegaMind
+ cd MegaMind
+ mkdir MegaMind_Alexa_SDK MegaMind_engine
 ```
 We clone a modified version of Amazon Alexa SDK into the ``MegaMind_Alexa_SDK`` and all other source codes for MegaMind in MegaMind_engine.
 First, lets download and set up ``MegaMind_Alexa_SDK``.
