@@ -1,6 +1,15 @@
-# MegaMind
+# MegaMind: A Platform for Security & Privacy Extensions for Voice Assistants
 
-MegaMind is a platform that enables users to deploy useful extensions on the Alexa virtual assistant. In the following document, we show how to build MegaMind from its source and deploy it on an x86 desktop. 
+Authors: Seyed Mohammadjavad Seyed Talebi and  Ardalan Amiri Sani, UC Irvine; Stefan Saroiu and Alec Wolman, Microsoft
+
+
+## MegaMind's demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7o-WQlEfSXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## MegaMind
+
+MegaMind is a platform that enables users to deploy useful extensions on the Alexa virtual assistant. In the following document, we show how to build MegaMind from its source and deploy it on an x86 desktop. Please refer to our paper for technical details: [MobiSys paper](http://www.ics.uci.edu/~ardalan/papers/SeyedTalebi_MobiSys21.pdf)
 
 This tutorial has been tested on Ubuntu16.04 on a VMWare virtual machine with the following properties:
 20GB of storage, 2GB of RAM, and 4 CPUs.
@@ -378,11 +387,8 @@ This time you do not need to press 's' to start a session. You can simply say 'A
 To get a good result from DeepSpeech speech to text please use headphones in a quiet environment. 
 
 
-## MegaMind's demo
-
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7o-WQlEfSXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+# Acknowledgments
+The work was supported in part by NSF Award #1846230. 
 
 
 
