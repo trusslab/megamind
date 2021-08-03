@@ -279,7 +279,7 @@ and copy the following text into the file:
 
 ```
 
-!!! note: please (1) replace XXWDXX with absolute path of $WD.  (2) please replace XXXX CLIENT_ID XXXX with your Amazon Alexa Device client ID.
+!!! note: please (1) replace XXWDXX with absolute path of $WD.  (2) please replace XXXX CLIENT_ID XXXX with your Amazon Alexa Device client ID. (please see [Register AVS devices in Amazon Voice Service](./AVS_account.md), for documentation on how to register for Amazon Alexa Device client ID.)
 
 Then, we generate a run  script to run the Device SDK using the above file.
 
