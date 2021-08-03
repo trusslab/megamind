@@ -1,0 +1,50 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "confidential conversation",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "secret_chat",
+                    "slots": [
+                        {
+                            "name": "cmd",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "search  {cmd}"
+                    ]
+                },
+                {
+                    "name": "key_intent",
+                    "slots": [
+                        {
+                            "name": "cmd",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "key is {cmd}"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}

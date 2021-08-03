@@ -340,6 +340,9 @@ Please note that for multi-turn conversations, you should not press 's' before e
 
 
 ### Test MegaMind's extensios
+
+Before testing MegaMind extensions you need to deploy two Skills on your Alexa account. Please follow [this document](./skill_deployment.md) on how to deploy MegaMind's  Skills on your Alexa account. 
+
 To show how MegaMind's extensions work in action, we enabled 3 simple extensions by default. A discarder that discards purchase-related utterances. A sanitizer that redacts first name of family members ( in this example, alex, steve and julia), and a companion extension which enables secure conversation with its companion skill. 
 We also enabled two beta Alexa skills in our Alexa account to facilitate testing these extensions. The first one is 'repeat conversation' which simply repeats whatever you say after the keyword 'repeat'. The second one is 'confidential conversation' which echos whatever you say, but uses MegaMind enabled secure channel (It sends and recieves encrypted messages hidden from AVS). 
 
