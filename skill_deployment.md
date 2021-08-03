@@ -18,7 +18,7 @@ For example, let assume you want to deploy the "repeat conversation" skill. Go t
 Then on top of the same page press, "Save model" and "Build model".
 As the next step we need to replace the python code of the skill from the sample code to our skill code. 
 In the menu bar above "Save model",... please clik on "Code" it is located between "Build" and "test"
-![Pic4](./Pics/Skill4.png)
+![Pic5](./Pics/Skill5.png)
 Here you need to replace the contents of "lambda_function.py" and "requierments.txt" with the files with same names under ``$WD/MegaMind/Skills/repeat_conversation``. Then press save and deploy. 
 The skill is ready to be used with your device.
 Please repeat these steps for "secret_chat" skill located on ``$WD/MegaMind/Skills/secret_chat``
